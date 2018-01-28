@@ -31,12 +31,12 @@ Function Close-Presentation($presentation) {
 }
 
 Function Garbage-Collect() {
-	[gc]::collect()
-	[gc]::WaitForPendingFinalizers()
+	[GC]::collect()
+	[GC]::WaitForPendingFinalizers()
 }
 
 Function Date(){
-	return (Get-Date -UFormat "%Y-%m-%d-%M")
+	return (Get-Date -UFormat "%Y-%m-%d")
 }
 
 Function Powerpoint-Path($path, $date){
